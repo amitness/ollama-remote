@@ -1,6 +1,10 @@
-# Ollama Remote
+# ollama-remote
 
-Expose and get a URL for ollama on any remote server.
+Automatically configure and obtain a URL for Ollama on any remote Linux server (GPU Providers, Google Colab, Kaggle, etc.) using the Cloudflared tunnel..
+
+> Note: For Google Colab, here is an example [notebook](https://colab.research.google.com/drive/1pmSzR8mGAUOtu8SHfD75XowncodRyygo?usp=sharing). This is only allowed if you are a paid colab user as per their [terms of service](https://research.google.com/colaboratory/faq.html#disallowed-activities). If you use it for free account, do it at your own risk.
+
+This is useful for faster experimentation if the ollama model run too slow locally, and for synthetic data generation in large batches.
 
 ## Usage
 Install the package via `pip`.
@@ -36,7 +40,7 @@ The model is actually downloaded and run on the server-side, so if the server ha
 <img width="653" alt="image" src="https://github.com/user-attachments/assets/18b74fc6-50df-4958-850f-aa028fed743b" />
 </p>
 
-The commands are same as regular ollama. 
+The commands are same as regular ollama and you can download any models that fits on the GPU server-side. 
 ```
 ollama pull phi3:mini
 ollama run phi3:mini
