@@ -26,15 +26,14 @@ You will get back the commands to copy and run locally.
 </p>
 
 ## Usecase 1: Run via ollama
-
-For example, if you were assigned this url, running it locally will allow you to pull and run any ollama model. You need to have `ollama` installed locally.
+Once you set `OLLAMA_HOST` to the assigned URL, you can run any ollama commands on your local terminal. It will feel like working locally, but the actual model inference happens on the server side. Make sure you have `ollama` CLI installed locally.
 
 ```bash
 export OLLAMA_HOST='https://spa-visiting-voices-omissions.trycloudflare.com'
 ollama run phi3:mini --verbose
 ```
 
-The model is actually downloaded and run on the server-side, so if the server has GPUs, it will be faster.
+If the server has GPUs such as Colab, this will be much faster.
 
 <p align="center">
 <img width="653" alt="image" src="https://github.com/user-attachments/assets/18b74fc6-50df-4958-850f-aa028fed743b" />
@@ -47,11 +46,7 @@ ollama run phi3:mini
 ```
 
 ## Usecase 2: OpenAI SDK
-You are also provided code to use the model through the OpenAI SDK. 
-
-If you wanted to use `phi3:mini`, you have to make sure to have run `ollama pull phi3:mini` before this.
-
-Then the code is same as above:
+You are also provided code to use the model through the OpenAI SDK. Make sure to pull the model specified in the code beforehand via `ollama pull phi3:mini`.
 
 ```python
 from openai import OpenAI
