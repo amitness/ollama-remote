@@ -1,0 +1,18 @@
+[project]
+name = "ollama-remote"
+version = "0.1.8"
+description = "Expose OLLAMA models to the internet on a remote server via tunneling"
+readme = "README.md"
+authors = [
+    { name = "Amit Chaudhary", email = "meamitkc@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = []
+license = { text = "MIT" }
+
+[project.scripts]
+ollama-remote = "ollama_remote.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
