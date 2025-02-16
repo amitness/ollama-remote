@@ -46,7 +46,7 @@ ollama run phi3:mini
 ```
 
 ## Usecase 2: OpenAI SDK
-You are also provided code to use the model through the OpenAI SDK. Make sure to pull the model specified in the code beforehand via `ollama pull phi3:mini`.
+You are also provided code to use the model through the [OpenAI SDK](https://ollama.com/blog/openai-compatibility). Make sure to pull the model specified in the code beforehand via `ollama pull phi3:mini`.
 
 ```python
 from openai import OpenAI
